@@ -21,15 +21,15 @@ PAGE_NO = 1
 
 
 class MirrorStatus:
-    STATUS_UPLOADING = "Uploading...📤"
-    STATUS_DOWNLOADING = "Downloading...📥"
-    STATUS_CLONING = "Cloning...♻️"
-    STATUS_WAITING = "Queued...📝"
+    STATUS_UPLOADING = "Yuborilmoqda...📤"
+    STATUS_DOWNLOADING = "Yuklab olinmoqda...📥"
+    STATUS_CLONING = "Klonlanmoqda...♻️"
+    STATUS_WAITING = "Navbatda...📝"
     STATUS_FAILED = "Failed 🚫. Cleaning Download..."
-    STATUS_PAUSE = "Paused...⭕️"
-    STATUS_ARCHIVING = "Archiving...🔐"
-    STATUS_EXTRACTING = "Extracting...📂"
-    STATUS_SPLITTING = "Splitting...✂️"
+    STATUS_PAUSE = "Pazua qilingan...⭕️"
+    STATUS_ARCHIVING = "Arxivlanmoqda...🔐"
+    STATUS_EXTRACTING = "Arxivdan ochilmoqda...📂"
+    STATUS_SPLITTING = "Bo'laklarga bo'linmoqda...✂️"
 
 
 PROGRESS_MAX_SIZE = 100 // 8
@@ -153,15 +153,15 @@ def get_readable_message():
                            f" | <b>Leechers:</b> <code>{download.torrent_info().num_leechs}</code>"
                 except:
                     pass
-                msg += f"\n<b>To Cancel:</b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
+                msg += f"\n<b>Bekor qilish uchun 👉:</b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
             msg += "\n\n"
             if STATUS_LIMIT is not None and index == STATUS_LIMIT:
                 break
         if STATUS_LIMIT is not None and dick_no > STATUS_LIMIT:
             msg += f"<b>Page:</b> <code>{PAGE_NO}</code>/<code>{pages}</code> | <b>Tasks:</b> <code>{dick_no}</code>\n"
             buttons = button_build.ButtonMaker()
-            buttons.sbutton("Previous", "pre")
-            buttons.sbutton("Next", "nex")
+            buttons.sbutton("Oldingi", "pre")
+            buttons.sbutton("Keyingi", "nex")
             button = InlineKeyboardMarkup(buttons.build_menu(2))
             return msg, button
         return msg, ""
