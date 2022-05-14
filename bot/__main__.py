@@ -45,8 +45,8 @@ def stats(update, context):
 
 def start(update, context):
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("Administrator🧑‍💻", "https://t.me/azik_developer")
-    buttons.buildbutton("AziK ProjecTs🦾", "https://t.me/azik_projects")
+    buttons.buildbutton("Administrator 🧑‍💻", "https://t.me/azik_developer")
+    buttons.buildbutton("AziK ProjecTs 🦾", "https://t.me/azik_projects")
     buttons.buildbutton("AziK Cinema 🎞", "https://t.me/azik_cinema")
     buttons.buildbutton("AziK Mirror 🎩", "https://t.me/+Pp11-KC_-n5jNDFi")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
